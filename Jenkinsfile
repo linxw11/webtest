@@ -7,5 +7,10 @@ pipeline {
         bat 'mvn compile'
       }
     }
+    stage('UT') {
+      steps {
+        junit 'UTResult'
+      }
+    }
   }
 }
