@@ -9,7 +9,8 @@ pipeline {
     }
     stage('UT') {
       steps {
-        junit 'UTResult'
+        bat 'mvn test'
+        junit './target/surefire-reports'
       }
     }
   }
