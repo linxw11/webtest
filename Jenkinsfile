@@ -12,6 +12,7 @@ pipeline {
         bat 'mvn test'
         junit 'target/surefire-reports/*.xml'
         pwd()
+        jacoco(execPattern: '**/target/**.exec')
       }
     }
   }
