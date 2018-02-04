@@ -5,18 +5,22 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.test.context.ActiveProfiles;
+import org.junit.runners.JUnit4;
+/*import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.test.context.web.WebAppConfiguration;*/
 
 /**
  * Created by linxw on 2018/2/2.
  */
 
-@RunWith(SpringJUnit4ClassRunner.class)
+/*@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath*:/applicationContext-*.xml", "classpath*:/spring-mvc.xml" })
-@WebAppConfiguration
+@WebAppConfiguration*/
+
+@RunWith(JUnit4.class)
+
 public class MathTest {
 
     @BeforeClass
