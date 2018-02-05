@@ -7,6 +7,11 @@ pipeline {
         bat 'mvn compile'
       }
     }
+    stage('sonar') {
+      steps {
+        bat 'mvn sonar:sonar'
+      }
+    }
     stage('UT') {
       steps {
         bat 'mvn test'
