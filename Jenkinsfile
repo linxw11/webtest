@@ -15,5 +15,10 @@ pipeline {
         jacoco(execPattern: '**/target/**.exec')
       }
     }
+    stage('sonar') {
+      steps {
+        bat 'mvn sonar:sonar'
+      }
+    }
   }
 }
