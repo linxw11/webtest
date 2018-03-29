@@ -32,7 +32,7 @@ pipeline {
     }
     stage('auto test') {
       steps {
-        sshPublisher(publishers: [sshPublisherDesc(configName: '164', transfers: [sshTransfer(excludes: '', execCommand: '''cp /root/webtest.war /opt/resin_atp_server/webapps/
+        sshPublisher(publishers: [sshPublisherDesc(configName: '164', transfers: [sshTransfer(excludes: '', execCommand: '''cp /root/root/target/webtest.war /opt/resin_atp_server/webapps/
 /opt/resin_atp_server/bin/resin.sh stop
 /opt/resin_atp_server/bin/resin.sh start''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: 'target', sourceFiles: 'target/webtest.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
       }
